@@ -23,11 +23,9 @@
           </a-assets>
          
         <a-marker 
-          preset="hiro"
-          raycaster="objects: .clickable"
-          emitevents="true"
-          cursor="fuse: false; rayOrigin: mouse;"
-          id="markerA"
+          preset="custom"
+          type="pattern" 
+          url="../markers/gallery.patt"
         >
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
             <a-entity
