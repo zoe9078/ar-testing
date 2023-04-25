@@ -8,6 +8,7 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene
          arjs
+         embedded
          renderer="logarithmicDepthBuffer: true;"
          vr-mode-ui="enabled: false"
          gesture-detector
@@ -15,41 +16,29 @@
         >
           <a-assets>
             <a-asset-item
-              id="luigi"
+              id="bowser"
               src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb"
             >
             </a-asset-item>
           </a-assets>
-        </a-marker>
+         
         <a-marker 
-            preset="custom"
-            type="pattern"
-            url="../markers/hiro.patt"
-            smooth="true"
-            smoothCount="10"
-            smoothTolerance=".01"
-            smoothThreshold="5"
-            raycaster="objects: .clickable"
-            emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;"
-          >
+          preset="custom"
+          type="pattern" 
+          url="../markers/hiro.patt"
+        >
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
             <a-entity
             position="0 0 0"
-            scale=".25 .25 .25"
+            scale="1 1 1"
             rotation="0 0 0"
             gltf-model="../models/eyeunitless.gltf"
             class = "clickable"
-            mindar-image-target="targetIndex: 0"
-            gesture-handler = "minScale: 0.5; maxScale: 10; rotationFactor: 1; locationBased: true;" 
+            gesture-handler
             animatio-mixer
-            >
-                >
-            </a-entity>
+            ></a-entity>
         </a-marker>
-            
-            
+        <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
-
